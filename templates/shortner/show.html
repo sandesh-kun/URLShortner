@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>Your shortened URL is: <a href="{{ request.scheme }}://{{ request.get_host }}/s/{{ url_instance.shortened_url }}">{{ request.scheme }}://{{ request.get_host }}/s/{{ url_instance.shortened_url }}</a></p>
+  <button onclick="copyToClipboard('{{ request.scheme }}://{{ request.get_host }}/{{ url_instance.shortened_url }}')">Copy URL</button>
+  <button onclick="window.location.href='{{ url_instance.original_url }}';">Visit</button>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(function() {
+        alert('Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Could not copy text: ', err);
+      });
+    }
+  </script>
+{% endblock %}

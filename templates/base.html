@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortner</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f2f5; /* Light grey background */
+    }
+    .content-wrap {
+      flex: 1 0 auto;
+      padding-top: 20px;
+      padding-bottom: 60px; /* Adjust based on footer height */
+    }
+    .footer {
+      flex-shrink: 0;
+      text-align: center;
+      padding: 20px 0;
+      background-color: #007bff; /* Bootstrap primary color */
+      color: #fff; /* White text color */
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .content {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fff; /* White background for content area */
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Soft shadow for content area */
+    }
+    /* Add more custom styles below */
+    h1, h2, h3, p {
+      color: #333; /* Dark grey text for better readability */
+    }
+  </style>
+</head>
+<body class="d-flex flex-column h-100">
+  {% include 'header.html' %}
+  
+  <div class="content-wrap">
+    <div class="container mt-4">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+  <footer class="footer mt-auto py-3">
+    {% include 'footer.html' %}
+  </footer>
+  
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

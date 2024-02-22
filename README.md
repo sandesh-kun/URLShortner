@@ -24,7 +24,7 @@ Clone the project to your local machine:
 git clone https://github.com/sandesh-kun/URLShortner.git
 cd URLShortner
 
-#### Step 2: Create and Activate a Virtual Environment
+Step 2: Create and Activate a Virtual Environment
 
 On macOS/Linux:
 
@@ -37,11 +37,11 @@ On Windows:
 python -m venv venv
 .\venv\Scripts\activate
 
-#### Step 3: Install Dependencies
+Step 3: Install Dependencies
 pip install -r requirements.txt
 
-#### Step 4: Database Migrations
+Step 4: Database Migrations
 python manage.py migrate
 
-#### Step 5: Running the Server
+Step 5: Running the Server
 python manage.py runserver

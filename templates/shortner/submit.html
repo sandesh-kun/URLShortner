@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  {% if submit_disabled %}
+    <p>You must be logged in to shorten URLs.</p>
+  {% endif %}
+
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Shorten URL</button>
+    <button type="submit" {% if submit_disabled %}disabled{% endif %}>Shorten URL</button>
   </form>
+
 {% endblock %}

@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>URL Shortner</title>
+  <title>URL Shortener</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -45,11 +38,6 @@
       flex-direction: column;
       height: 100%;
     }
-    .flex-container {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
     .content {
       flex-grow: 1;
       display: flex;
@@ -60,6 +48,24 @@
       margin: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Soft shadow for content area */
+    }
+    /* Improved form aesthetics */
+    form {
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #ffffff;
+    }
+    .form-control, .btn {
+      border-radius: 20px; /* Rounded edges for form inputs and buttons */
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
     }
     /* Add more custom styles below */
     h1, h2, h3, p {
